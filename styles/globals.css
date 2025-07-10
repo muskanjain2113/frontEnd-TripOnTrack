@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme Colors */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-syne: 'Syne', sans-serif; /* ✅ Add this line */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Animation (optional) */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Global Body Styles */
+body {
+  margin: 0; /* 🔥 removes default 8px gap */
+  padding: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-syne), sans-serif;
+}
